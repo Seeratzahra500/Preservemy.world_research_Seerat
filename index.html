@@ -7,19 +7,21 @@
 <meta name="description" content="Seerat E Zahra — third-year Computer Science student at FAST-NUCES Islamabad. Full-stack web development and applied machine learning.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0B0D12;
-    --panel:#12151D;
-    --panel-2:#171B26;
-    --line:#242A38;
-    --line-2:#313a4f;
-    --text:#E9EBF2;
-    --muted:#8A93A6;
-    --cobalt:#5B84FF;
-    --violet:#A488FF;
-    --disp:'Bricolage Grotesque', system-ui, sans-serif;
+    /* Rangde dye palette, on dark */
+    --bg:#171A22;
+    --panel:#1E2230;
+    --panel-2:#232838;
+    --line:#2E3344;
+    --line-2:#414765;
+    --text:#F0EAE0;
+    --muted:#A39A86;
+    --cobalt:#D65A43;   /* madder — brand / action */
+    --violet:#E0A340;   /* turmeric — warm accent */
+    --indigo:#8FA6D8;   /* indigo — notation */
+    --disp:'Fraunces', Georgia, serif;
     --sans:'Inter', system-ui, sans-serif;
     --mono:'JetBrains Mono', ui-monospace, monospace;
     --grad:linear-gradient(115deg, var(--cobalt), var(--violet));
@@ -35,9 +37,9 @@
   body::before{
     content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
     background:
-      radial-gradient(680px 480px at 12% -6%, rgba(91,132,255,.18), transparent 60%),
-      radial-gradient(720px 520px at 92% 8%, rgba(164,136,255,.16), transparent 62%),
-      radial-gradient(900px 700px at 78% 106%, rgba(91,132,255,.10), transparent 60%);
+      radial-gradient(680px 480px at 12% -6%, rgba(214,90,67,.18), transparent 60%),
+      radial-gradient(720px 520px at 92% 8%, rgba(224,163,64,.16), transparent 62%),
+      radial-gradient(900px 700px at 78% 106%, rgba(214,90,67,.10), transparent 60%);
   }
   img{max-width:100%; display:block;}
   a{color:inherit; text-decoration:none;}
@@ -89,7 +91,7 @@
     .hero-bento{grid-template-columns:1fr; grid-template-areas:"head" "photo" "focus" "cgpa" "now";}
   }
   .t-head{grid-area:head; display:flex; flex-direction:column; justify-content:center; padding:40px;}
-  .t-head::after{content:""; position:absolute; width:420px; height:420px; right:-120px; top:-160px; background:radial-gradient(circle, rgba(91,132,255,.22), transparent 62%); pointer-events:none;}
+  .t-head::after{content:""; position:absolute; width:420px; height:420px; right:-120px; top:-160px; background:radial-gradient(circle, rgba(214,90,67,.22), transparent 62%); pointer-events:none;}
   .chip{display:inline-flex; align-items:center; gap:9px; align-self:flex-start; font-family:var(--mono); font-size:11.5px; color:var(--text); background:rgba(255,255,255,.04); border:1px solid var(--line); padding:7px 13px; border-radius:40px; margin-bottom:22px;}
   .chip .dot{width:8px; height:8px; border-radius:50%; background:#33D18F; position:relative;}
   .chip .dot::after{content:""; position:absolute; inset:0; border-radius:50%; background:#33D18F; animation:pulse 2s ease-out infinite;}
@@ -101,7 +103,7 @@
   .cta-row{display:flex; gap:12px; flex-wrap:wrap;}
   .btn{font-family:var(--mono); font-size:12.5px; padding:13px 22px; border-radius:11px; display:inline-flex; align-items:center; gap:8px; cursor:pointer; transition:transform .15s, box-shadow .2s, background .2s;}
   button.btn{-webkit-appearance:none; appearance:none;}
-  .btn.primary{background:var(--grad); color:#fff; box-shadow:0 10px 30px -12px rgba(91,132,255,.8);}
+  .btn.primary{background:var(--grad); color:#fff; box-shadow:0 10px 30px -12px rgba(214,90,67,.8);}
   .btn.primary:hover{transform:translateY(-2px);}
   .btn.ghost{background:rgba(255,255,255,.04); color:var(--text); border:1px solid var(--line-2);}
   .btn.ghost:hover{transform:translateY(-2px); border-color:var(--cobalt);}
@@ -144,7 +146,7 @@
   /* ---------- education ---------- */
   .edu-bento{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
   @media (max-width:820px){.edu-bento{grid-template-columns:1fr;}}
-  .edu-badge{font-family:var(--mono); font-size:10.5px; color:var(--cobalt); background:rgba(91,132,255,.12); padding:4px 10px; border-radius:20px; display:inline-block; margin-bottom:14px;}
+  .edu-badge{font-family:var(--mono); font-size:10.5px; color:var(--cobalt); background:rgba(214,90,67,.12); padding:4px 10px; border-radius:20px; display:inline-block; margin-bottom:14px;}
   .tile h3{font-family:var(--disp); font-weight:600; font-size:1.1rem; margin:0 0 6px; letter-spacing:-.01em;}
   .edu-when{font-family:var(--mono); font-size:11px; color:var(--muted); display:block; margin-bottom:8px;}
   .edu-p{font-size:13px; color:#B9C0CE; margin:0;}
@@ -161,10 +163,10 @@
   .proj:hover{transform:translateY(-4px);}
   .proj.feat{grid-column:span 2;}
   @media (max-width:560px){.proj.feat{grid-column:span 1;}}
-  .proj.feat::after{content:""; position:absolute; width:340px; height:340px; right:-120px; bottom:-160px; background:radial-gradient(circle, rgba(164,136,255,.18), transparent 62%); pointer-events:none;}
+  .proj.feat::after{content:""; position:absolute; width:340px; height:340px; right:-120px; bottom:-160px; background:radial-gradient(circle, rgba(224,163,64,.18), transparent 62%); pointer-events:none;}
   .proj-top{display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:14px;}
-  .ptag{font-family:var(--mono); font-size:10px; text-transform:uppercase; letter-spacing:.04em; color:var(--cobalt); background:rgba(91,132,255,.12); padding:4px 9px; border-radius:20px;}
-  .ptag.solo{color:var(--violet); background:rgba(164,136,255,.14);}
+  .ptag{font-family:var(--mono); font-size:10px; text-transform:uppercase; letter-spacing:.04em; color:var(--cobalt); background:rgba(214,90,67,.12); padding:4px 9px; border-radius:20px;}
+  .ptag.solo{color:var(--violet); background:rgba(224,163,64,.14);}
   .proj-when{font-family:var(--mono); font-size:11px; color:var(--muted);}
   .proj h3{font-family:var(--disp); font-weight:700; font-size:1.28rem; margin:0 0 6px; letter-spacing:-.02em;}
   .proj .stack{font-family:var(--mono); font-size:11px; color:var(--muted); margin:0 0 10px;}
@@ -222,11 +224,11 @@
     h1,h2,h3,h4,.stat-tile .big{color:#111 !important;}
     .t-head h1{font-size:20pt !important; margin-bottom:8pt;}
     .t-head{padding:12pt !important;}
-    .grad-text, .logo b, .stat-tile .big.grad{-webkit-text-fill-color:#2B54FF !important; color:#2B54FF !important; background:none !important;}
+    .grad-text, .logo b, .stat-tile .big.grad{-webkit-text-fill-color:#A63A2B !important; color:#A63A2B !important; background:none !important;}
     p, .lede, .edu-p, .proj p, .about-bento p{color:#222 !important;}
     .tile-label, .kicker, .proj-when, .stack, .edu-when, .edu-badge, .about-tags span, .course-cloud span, .skill p, .xp-item p, .proj .stack{color:#555 !important;}
-    .kicker{color:#2B54FF !important;}
-    a{color:#2B54FF !important;}
+    .kicker{color:#A63A2B !important;}
+    a{color:#A63A2B !important;}
     .reveal{opacity:1 !important; transform:none !important;}
     .hero-bento{grid-template-columns:1fr 1fr !important; grid-template-areas:"head head" "focus cgpa" "now now" !important; gap:8pt;}
     .t-photo{display:none !important;}
@@ -238,7 +240,7 @@
     .skill-bento{grid-template-columns:1fr 1fr !important; gap:8pt;}
     .contact-tile{background:#fff !important; padding:10pt 12pt !important; border:1px solid #d9d9de !important;}
     .contact-tile h2, .contact-tile .lede{color:#111 !important;}
-    .contact-links a{background:#fff !important; border:1px solid #bbb !important; color:#2B54FF !important;}
+    .contact-links a{background:#fff !important; border:1px solid #bbb !important; color:#A63A2B !important;}
     .extra{gap:8pt;}
   }
 </style>
